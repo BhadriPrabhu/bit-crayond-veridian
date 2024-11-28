@@ -1,3 +1,7 @@
 body{
     font-family: "IBM Plex Serif", serif;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }

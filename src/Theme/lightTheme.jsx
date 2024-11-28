@@ -29,6 +29,10 @@ export const lightTheme = createTheme({
       dark: "#666114",
       lite: "#EFE992",
       a100: "#F9C300",
+      a50: "#CFE1DF",
+      a40: "#11423F",
+      a30: "#000000",
+      a20: "#005139",
     },
   },
   typography: {

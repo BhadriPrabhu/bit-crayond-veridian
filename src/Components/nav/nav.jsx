@@ -1,32 +1,135 @@
-import { Box, Link, useTheme } from "@mui/material";
-import Logo from "../../assets/logo";
-
+import { Box, Tab, Tabs, useTheme } from "@mui/material";
+import Logo from "../../assets/logo/logo";
+import { useState } from "react";
+import { Link } from "react-scroll";
 
 function Nav() {
   const theme = useTheme();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   return (
-    <Box sx={{ margin: "0px", padding: "0px", top: "-20px", position: "relative" }}>
+    <Box
+      sx={{
+        marginTop: 0,
+        padding: "0px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
       <Box
         sx={{
-          position: "sticky",
-          top: "0px",
-          width: "100%",
-          bgcolor: theme.palette.background.default, // Adjust theme usage
+          bgcolor: theme.palette.background.default,
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           alignItems: "center",
         }}
       >
         <Box>
           <Logo />
         </Box>
-        <Box>
-          <Link href="#home">Home</Link>
-          <Link href="#about">About Us</Link>
-          <Link href="#team">Our Team</Link>
-          <Link href="#investment">Investment Approach</Link>
-          <Link href="#contact">Contact Us</Link>
+        <Box sx={{ marginRight: "280px", marginTop: "-10px" }}>
+          <Tabs
+            aria-label="Navbar"
+            value={value}
+            onChange={handleChange}
+            TabIndicatorProps={{
+              style: {
+                backgroundColor: theme.palette.primary.main,
+                height: "4px",
+              },
+            }}
+          >
+            <Tab
+              component={Link}
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-160}
+              // duration={500}
+              sx={{
+                color: theme.palette.text.textsecondary,
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "22px",
+                fontFamily: theme.typography.text.font2,
+                textTransform: "capitalize",
+              }}
+              label="Home"
+            />
+            <Tab
+              component={Link}
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              // duration={500}
+              sx={{
+                color: theme.palette.text.textsecondary,
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "22px",
+                fontFamily: theme.typography.text.font2,
+                textTransform: "capitalize",
+              }}
+              label="About Us"
+            />
+            <Tab
+              component={Link}
+              to="team"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              // duration={500}
+              sx={{
+                color: theme.palette.text.textsecondary,
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "22px",
+                fontFamily: theme.typography.text.font2,
+                textTransform: "capitalize",
+              }}
+              label="Our Team"
+            />
+            <Tab
+              component={Link}
+              to="investment"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              // duration={500}
+              sx={{
+                color: theme.palette.text.textsecondary,
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "22px",
+                fontFamily: theme.typography.text.font2,
+                textTransform: "capitalize",
+              }}
+              label="Investment Approach"
+            />
+            <Tab
+              component={Link}
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              // duration={500}
+              sx={{
+                color: theme.palette.text.textsecondary,
+                fontWeight: "500",
+                fontSize: "18px",
+                lineHeight: "22px",
+                fontFamily: theme.typography.text.font2,
+                textTransform: "capitalize",
+              }}
+              label="Contact Us"
+            />
+          </Tabs>
         </Box>
       </Box>
     </Box>

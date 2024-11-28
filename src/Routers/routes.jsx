@@ -1,5 +1,8 @@
 export const veridianRoutes = {
-    home: '../Components/home/home.jsx',
-    about: '../Components/about/about.jsx',
-
+    screen: '/screen1',
+    home: '/home',
+    about: '/about',
+    team: '/slide',
+    investment: '/investment',
+    contact: '/contact',
 }
