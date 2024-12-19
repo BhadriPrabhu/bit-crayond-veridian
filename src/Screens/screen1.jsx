@@ -7,7 +7,7 @@ import About from "../Components/about/about";
 // import Investment from "../Components/investment/investment";
 import InvestAll from "../Components/investment/investall";
 import Contact from "../Components/contact/contact";
-import CopyRight from "../Components/bottompage/copyRight";
+import CopyRight from "../Components/bottompage/copyright";
 
 function Screen1() {
 
