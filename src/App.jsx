@@ -1,6 +1,6 @@
 import './App.css'
 import Screen1 from './Screens'
-import { ThemeProvider } from '@mui/material'
+import { Grid, ThemeProvider } from '@mui/material'
 import { lightTheme } from './Theme'
 import { BrowserRouter } from 'react-router-dom'
 // import RouterApp from './Routers'
@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 function App() {
 
   return (
+    <Grid>
       <BrowserRouter>
         <ThemeProvider theme={lightTheme}>
           <Screen1 />
@@ -15,6 +16,7 @@ function App() {
           {/* <Outlet /> */}
         </ThemeProvider>
       </BrowserRouter>
+    </Grid>
 
   )
 }

@@ -1,6 +1,6 @@
 const InvestRight = (props) => (
   <svg
-    width={318}
+    width={270}
     height={185}
     viewBox="0 0 318 185"
     fill="none"

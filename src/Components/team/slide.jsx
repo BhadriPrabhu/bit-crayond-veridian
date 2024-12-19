@@ -21,7 +21,7 @@ export default function Slide() {
 
 
   return (
-    <Box id="team" sx={{ marginTop: '100px', marginX: '-90px', position: 'relative' }}>
+    <Box  sx={{ marginTop: '100px', marginX: '-90px', position: 'relative' }}>
       <Typography
         sx={{
           fontFamily: theme.typography.text.font2,
@@ -43,7 +43,7 @@ export default function Slide() {
         aria-label="Previous Slide"
         sx={{
           position: 'absolute',
-          top: '50%',
+          top: '60%',
           left: '10px',
           zIndex: 10,
           transform: 'translateY(-50%)',
@@ -66,12 +66,12 @@ export default function Slide() {
         id='nextbtn'
         sx={{
           position: 'absolute',
-          top: '50%',
+          top: '60%',
           right: '12px',
           zIndex: 10,
           transform: 'translateY(-50%)',
           borderRadius: '50%',
-          paddingX: '10px',
+          paddingX: '12px',
           backgroundColor: theme.palette.secondary.a40,
           display: isEnd ? "none" : "block",
           '&:hover': {
@@ -110,13 +110,13 @@ export default function Slide() {
         className="mySwiper"
 
       >
-        <SwiperSlide style={{ transform: 'skew(-25deg)', backgroundColor: 'white' }}>
+        <SwiperSlide style={{ transform: "skew(-25deg)", backgroundColor: 'white' }}>
           <SlidePage />
         </SwiperSlide>
-        <SwiperSlide style={{ transform: 'skew(-25deg)', backgroundColor: 'white' }}>
+        <SwiperSlide style={{ transform: "skew(-25deg)", backgroundColor: 'white' }}>
           <SlidePage2 />
         </SwiperSlide>
-        <SwiperSlide style={{ transform: 'skew(-25deg)', backgroundColor: 'white' }}>
+        <SwiperSlide style={{ transform: "skew(-25deg)", backgroundColor: 'white' }}>
           <SlidePage3 />
         </SwiperSlide>
       </Swiper>

@@ -1,7 +1,7 @@
 
 const PersonJarvis = (props) => (
   <svg
-    width={304}
+    width={270}
     height={334}
     viewBox="0 0 304 334"
     fill="none"

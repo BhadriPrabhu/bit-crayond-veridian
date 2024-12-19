@@ -1,6 +1,6 @@
 const InvestMiddle = (props) => (
   <svg
-    width={319}
+    width={270}
     height={201}
     viewBox="0 0 319 201"
     fill="none"
